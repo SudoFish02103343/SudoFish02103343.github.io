@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft鳕鱼互通服</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 宣传图区域 -->
+    <section class="banner-section">
+        <div class="banner-overlay">
+            <div class="banner-content">
+                <h1>🐟 Minecraft鳕鱼互通服</h1>
+                <p class="banner-subtitle">基岩版与Java版完美互通 • 稳定运行 • 友好社区</p>
+                <div class="banner-buttons">
+                    <button class="btn-primary" onclick="copyServerAddress('ma10.r9mc.cn:8000')">
+                        <i class="fas fa-copy"></i> 复制原版服地址
+                    </button>
+                    <button class="btn-secondary" onclick="copyServerAddress('frp-gap.com:51567')">
+                        <i class="fas fa-copy"></i> 复制Mod服地址
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🐟</span>
+                <span class="logo-text">鳕鱼互通服</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#server-info" class="nav-link">服务器信息</a></li>
+                <li><a href="#community" class="nav-link">官方社群</a></li>
+                <li><a href="#forum" class="nav-link">社区论坛</a></li>
+                <li><a href="#rules" class="nav-link">服务器规则</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主要内容区 -->
+    <main class="main-content">
+        <!-- 服务器信息 -->
+        <section id="server-info" class="info-section">
+            <div class="section-header">
+                <h2><i class="fas fa-server"></i> 服务器信息</h2>
+                <p>选择适合你的服务器加入冒险</p>
+            </div>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="card-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>原版服务器</h3>
+                        <span class="status-badge online">在线</span>
+                    </div>
+                    <div class="server-address">
+                        <code>ma10.r9mc.cn:8000</code>
+                        <button class="copy-btn" onclick="copyServerAddress('ma10.r9mc.cn:8000')">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <ul class="server-details">
+                        <li><i class="fas fa-code-branch"></i> 版本：1.21.8</li>
+                        <li><i class="fas fa-seedling"></i> 种子：114863754</li>
+                        <li><i class="fas fa-plug"></i> 支持：基岩版 & Java版</li>
+                        <li><i class="fas fa-users"></i> 状态：正常运行中</li>
+                    </ul>
+                </div>
+
+                <div class="info-card mod-card">
+                    <div class="card-header">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Mod服务器</h3>
+                        <span class="status-badge online">在线</span>
+                    </div>
+                    <div class="server-address">
+                        <code>frp-gap.com:51567</code>
+                        <button class="copy-btn" onclick="copyServerAddress('frp-gap.com:51567')">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <div class="mod-tag">
+                        <i class="fas fa-robot"></i>
+                        重度机械症 Mod 服
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 官方社群 -->
+        <section id="community" class="community-section">
+            <div class="section-header">
+                <h2><i class="fas fa-users"></i> 官方社群</h2>
+                <p>加入我们的社区，与其他玩家交流</p>
+            </div>
+            
+            <div class="community-cards">
+                <div class="qq-card">
+                    <div class="qq-icon">
+                        <i class="fab fa-qq"></i>
+                    </div>
+                    <div class="qq-content">
+                        <h3>QQ群</h3>
+                        <div class="qq-number">775974668</div>
+                        <p>加入官方QQ群获取最新资讯和玩家交流</p>
+                        <button class="join-btn" onclick="copyQQNumber()">
+                            <i class="fas fa-user-plus"></i> 复制群号
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 服务器规则 -->
+        <section id="rules" class="rules-section">
+            <div class="section-header">
+                <h2><i class="fas fa-book"></i> 服务器规则</h2>
+                <p>请仔细阅读并遵守服务器规则</p>
+            </div>
+            
+            <div class="rules-grid">
+                <div class="rule-card">
+                    <div class="rule-icon success">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>双版本支持</h4>
+                    <p>基岩版和Java版都可以进入服务器</p>
+                </div>
+                
+                <div class="rule-card">
+                    <div class="rule-icon warning">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h4>建筑保护</h4>
+                    <p>版本更新时仅保留保护坐标范围内的建筑</p>
+                </div>
+                
+                <div class="rule-card">
+                    <div class="rule-icon info">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>白名单制度</h4>
+                    <p>初次加入需要联系柱子添加白名单</p>
+                </div>
+                
+                <div class="rule-card">
+                    <div class="rule-icon danger">
+                        <i class="fas fa-ban"></i>
+                    </div>
+                    <h4>禁止鞘翅</h4>
+                    <p>禁止使用鞘翅，否则会导致服务器崩溃</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 社区论坛 -->
+        <section id="forum" class="forum-section">
+            <div class="section-header">
+                <h2><i class="fas fa-comments"></i> 社区论坛</h2>
+                <p>分享你的冒险故事和建筑作品</p>
+            </div>
+            
+            <!-- 发帖表单 -->
+            <div class="post-form-container">
+                <div class="post-form">
+                    <h3>发布新帖子</h3>
+                    <form id="postForm">
+                        <div class="form-group">
+                            <input type="text" id="postTitle" placeholder="输入帖子标题..." required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="postContent" placeholder="分享你的想法、冒险故事或建筑展示..." rows="5" required></textarea>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <div class="media-actions">
+                                <button type="button" class="action-btn" onclick="document.getElementById('imageUpload').click()">
+                                    <i class="fas fa-image"></i> 图片
+                                </button>
+                                <button type="button" class="action-btn" onclick="document.getElementById('videoUpload').click()">
+                                    <i class="fas fa-video"></i> 视频
+                                </button>
+                                <input type="file" id="imageUpload" accept="image/*" hidden multiple>
+                                <input type="file" id="videoUpload" accept="video/*" hidden multiple>
+                            </div>
+                            
+                            <div class="emoji-actions">
+                                <span>表情：</span>
+                                <button type="button" class="emoji-btn" onclick="addEmoji('😊')">😊</button>
+                                <button type="button" class="emoji-btn" onclick="addEmoji('🎮')">🎮</button>
+                                <button type="button" class="emoji-btn" onclick="addEmoji('❤️')">❤️</button>
+                                <button type="button" class="emoji-btn" onclick="addEmoji('⚡')">⚡</button>
+                                <button type="button" class="emoji-btn" onclick="addEmoji('🏠')">🏠</button>
+                            </div>
+                        </div>
+
+                        <div id="mediaPreview" class="media-preview"></div>
+
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> 发布帖子
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- 帖子列表 -->
+            <div class="posts-container">
+                <h3>最新帖子</h3>
+                <div id="postsList" class="posts-list">
+                    <!-- 帖子将通过JS动态生成 -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-icon">🐟</span>
+                <span>Minecraft鳕鱼互通服</span>
+            </div>
+            <p>打造最友好的Minecraft互通服务器社区</p>
+            <div class="footer-links">
+                <a href="#server-info">服务器信息</a>
+                <a href="#rules">服务器规则</a>
+                <a href="#community">官方社群</a>
+                <a href="#forum">社区论坛</a>
+            </div>
+            <div class="copyright">
+                &copy; 2024 Minecraft鳕鱼互通服. 保留所有权利.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
